@@ -1,0 +1,9 @@
+@import '../../../style/constants.scss';
+
+.line {
+    height: 1px;
+    width: 800px;
+    background: $color_yellow;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}

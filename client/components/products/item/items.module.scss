@@ -1,0 +1,22 @@
+@import '../../../style/constants.scss';
+
+.main {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 0 40px;
+    gap: 110px;
+    margin-bottom: 50px;
+
+    h1 {
+        margin: 0 auto;
+    }
+}
+
+
+.option {
+    background: none;
+    border: 1px solid $color_black;
+    padding: 10px;
+    border-radius: 20px;
+}

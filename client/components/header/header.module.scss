@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+@import '../../style/constants.scss';
+
+.header {
+  padding-bottom: 20px;
+
+  .headerTop {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+
+    img {
+      width: 24px;
+      cursor: pointer;
+    }
+
+    p {
+      font-size: 12px;
+    }
+  }
+
+  .inf {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: $color_yellow;
+    font-size: 14px;
+    cursor: default;
+  
+    &Content {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+    }
+  }
+
+  .logo {
+    transition: 300ms;
+
+    a {
+      text-decoration: none;
+      color: $color_black;
+      font-family: 'Tilt Neon', cursive;
+      font-size: 40px;
+      user-select: none;
+    }
+
+    &.active {
+      display: none;
+    }
+  }
+
+  .topMenu {
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-weight: 600;
+    font-size: 12px;
+    height: 55px;
+
+    .search {
+      display: flex;
+      align-items: center;
+      margin-right: 150px;
+      cursor: pointer;
+
+      img {
+        margin-right: -35px;
+      }
+
+      input {
+        width: 100px;
+        padding: 10px 10px 10px 45px;
+        background: none;
+        outline: none;
+        border: none;
+        transition: 300ms;
+        z-index: 2;
+        cursor: pointer;
+
+        &::placeholder {
+          color: $color_black;
+          font-weight: 600;
+        }
+
+        &:focus {
+          width: 400px;
+          border: $color_black solid 1px;
+          border-radius: 10px;
+          cursor: auto;
+        }
+      }
+
+      .close {
+        z-index: 3;
+
+        &.active{
+          visibility: hidden;
+        }
+
+        img {
+          margin-left: -30px;
+          height: 15px;
+          max-width: 16px;
+          z-index: 4;
+        }
+      }
+    }
+
+
+    .userBlock {
+      margin-right: 20px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      .user {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        img {
+          object-fit: cover;
+          overflow: hidden;
+          border-radius: 50%;
+          width: 24px;
+          height: 24px;
+        }
+        
+        p {
+          color: $color_black;
+        }
+      }
+    }
+
+    img:nth-child(4) {
+      margin-right: 15px;
+    }
+
+    .userMenu {
+      position: absolute;
+      top: 50px;
+      right: 0;
+      z-index: 10;
+      
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        li {
+          list-style-type: none;
+          cursor: pointer;
+          color: $color_black;
+        }
+      }
+    }
+  }
+
+
+
+  .basket {
+    position: absolute;
+    margin-left: 800px;
+    margin-top: 110px;
+    background: $color_white;
+    border: 1px $color_black solid;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    z-index: 5;
+    gap: 10px;
+    text-align: center;
+
+    .closeButton {
+        cursor: pointer;
+        margin-left: 295px;
+        margin-top: -20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 3px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px solid $color_black;
+        background: $color_white;
+    }
+    
+    .closeButton img {
+        width: 15px;
+        height: 15px;
+    }
+
+  }
+}
